@@ -83,6 +83,7 @@ func authenticate(cmd *cobra.Command, args []string) {
 	code := getCode(id)
 	api.AuthorizeWithCode(id, secret, code)
 	fmt.Println("\nAuthentication successful, setup complete, you should be able to run other commands now!")
+	fmt.Println("The config file has been written to `$HOME/.config/baton.json`")
 }
 
 func init() {
